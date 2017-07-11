@@ -33,26 +33,25 @@ test('check it returns unchanged todos object', function(t) {
 
 test('check add newtodo',function(t){
   var newTodo = {
-  id: 2,
-  description:'wash dishes',
-  done: true
-}
-var todos = [{
-    id: 0,
-    description: 'smash avocados',
+    id: 2,
+    description:'wash dishes',
     done: true
-  },
-  {
-    id: 1,
-    description: 'make coffee',
-    done: false
   }
-];
+  var todos = [{
+      id: 0,
+      description: 'smash avocados',
+      done: true
+    },
+    {
+      id: 1,
+      description: 'make coffee',
+      done: false
+    }
+  ];
   var actual = logic.todoFunctions.addTodo(todos,newTodo);
   var expected = todos.concat(newTodo);
   t.deepEqual(actual, expected);
   t.end();
-
 })
 
 test('check it has new id', function(t) {
@@ -94,7 +93,58 @@ test('check it has new id', function(t) {
 // up to here //
 
 // tests for deleteTodo function //
+test("return same todo if don't delete", function(t) {
+  var todos = [{
+      id: 0,
+      description: 'smash avocados',
+      done: true
+    },
+    {
+      id: 1,
+      description: 'make coffee',
+      done: false
+    }
+  ];
+  var actual = logic.todoFunctions.deleteTodo(todos);
+  var expected = todos;
+  t.deepEqual(actual, expected);
+  t.end();
+})
 
+test("return new todos array without object with idToDelete", function(t) {
+  var todos = [{
+      id: 0,
+      description: 'smash avocados',
+      done: true
+    },
+    {
+      id: 1,
+      description: 'make coffee',
+      done: false
+    }
+  ];
+  var todosCopy = [{
+      id: 0,
+      description: 'smash avocados',
+      done: true
+    },
+    {
+      id: 1,
+      description: 'make coffee',
+      done: false
+    }
+  ];
+  var idToDelete = 1;
+  var actual = logic.todoFunctions.deleteTodo(todos, idToDelete);
+  var expected = [{
+      id: 0,
+      description: 'smash avocados',
+      done: true
+    }];
+  t.deepEqual(actual, expected);
+  t.deepEqual(todos, todosCopy)
+  t.end();
+})
 
 // up to here
 
