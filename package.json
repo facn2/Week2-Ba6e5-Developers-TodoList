@@ -1,0 +1,23 @@
+{
+  "name": "-y",
+  "version": "1.0.0",
+  "description": "Create a webpage with a todo list.",
+  "main": "dom.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facn2/Week2-Ba6e5-Developers-TodoList.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/facn2/Week2-Ba6e5-Developers-TodoList/issues"
+  },
+  "homepage": "https://github.com/facn2/Week2-Ba6e5-Developers-TodoList#readme",
+  "devDependencies": {
+    "tap-spec": "^4.1.1",
+    "tape": "^4.7.0"
+  }
+}
