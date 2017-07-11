@@ -44,6 +44,14 @@ var todoFunctions = {
     // in the new todo array, all elements will remain unchanged except the one with id: idToMark
     // this element will have its done value toggled
     // hint: array.map
+
+    var changeDoneTodos = todos.map(function(everyTodo){
+      if (everyTodo.id === idToMark) {
+        return Object.assign({}, everyTodo, {done: true})
+      }
+      else return everyTodo
+    });
+    return changeDoneTodos;
   },
   sortTodos: function(todos, sortFunction) {
     // stretch goal! Do this last
@@ -52,7 +60,6 @@ var todoFunctions = {
     // hint: array.slice, array.sort
   },
 };
-
 
 module.exports={
   todoFunctions
