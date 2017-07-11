@@ -11,7 +11,7 @@ var todoFunctions = {
     function incrementCounter() {
       return (idCounter += 1);
     }
-
+    
     return incrementCounter;
   })(),
   addTodo: function(todos, newTodo) {
