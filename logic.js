@@ -11,7 +11,7 @@ var todoFunctions = {
     function incrementCounter() {
       return (idCounter += 1);
     }
-    
+
     return incrementCounter;
   })(),
   addTodo: function(todos, newTodo) {
@@ -19,6 +19,14 @@ var todoFunctions = {
     // returns a new array, it should contain todos with the newTodo added to the end.
     // add an id to the newTodo. You can use the generateId function to create an id.
     // hint: array.concat
+    if (newTodo === undefined) {
+      return todos
+    }
+    else {
+     newTodo.id = todoFunctions.generateId();
+     newTodo.done = false;
+     return todos.concat(newTodo);
+    }
   },
   deleteTodo: function(todos, idToDelete) {
     // should leave the input argument todos unchanged
@@ -38,3 +46,8 @@ var todoFunctions = {
     // hint: array.slice, array.sort
   },
 };
+
+
+module.exports={
+  todoFunctions
+}
