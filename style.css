@@ -1,11 +1,57 @@
-.democlass {
-  background-color: red;
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
-.app-container {
-  width: 100%;
+header {
+  margin: 0 auto;
   text-align: center;
-  border: solid gray 2px;
+}
+
+header h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.watermelon {
+  width: 5em;
+  height: 5em;
+  margin-bottom: 0.5em;
+}
+
+.main-container {
+  margin-top: 20px;
+  width: 300px;
+  height: 350px;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: solid 8px #2c3033;
+  background: white;
+  box-shadow: 0 0 0px 1px rgba(255, 255, 255, .4), 0 0 0px 3px #2c3033;
+  overflow: scroll;
+}
+
+.center-container {
+  margin-top: 10%;
+}
+
+
+/*.main-container {
+  margin: 0 auto;
+  width: 500px;
+  text-align: center;
+  border: gray 1.5px solid;
+}
+*/
+
+.todo-container {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+}
+
+ul {
+  padding: 0px;
 }
 
 .list-block {
@@ -13,14 +59,21 @@
   height: 50px;
 }
 
+
+/*form*/
+
+.add-todo {
+  text-align: center;
+}
+
 ul li {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  border: solid gray 2px;
+  border-top: solid gray 1.5px;
   height: 40px;
   text-align: left;
-  text-indent: 18px;
+  text-indent: 10px;
 }
 
 button {

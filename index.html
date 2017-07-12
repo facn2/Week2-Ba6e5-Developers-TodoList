@@ -5,18 +5,30 @@
   <meta charset="utf-8">
   <title>tdd todo</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./fav-icon.png">
 </head>
 
 <body>
-  <form id="add-todo">
-    <input type="text" name="description" value="">
-    <input type="submit" name="" value="Submit">
-  </form>
-  <div id="todo-container">
-    <ul>
-    </ul>
-  </div>
+  <header>
+    <h1>To-do App</h1>
+    <img class="watermelon" src="./watermelon.svg" alt="watermelon">
+  </header>
+  <div class="main-container">
+    <div class="center-container">
 
+
+      <form class="add-todo" id="add-todo">
+        <input placeholder="Enter your activity..." type="text" name="description" value="">
+        <input type="submit" name="" value="Submit">
+      </form>
+      <div class="todo-container" id="todo-container">
+        <ul>
+        </ul>
+      </div>
+    </div>
+  </div>
 </body>
 <script type="text/javascript" src="./logic.js"></script>
 <script type="text/javascript" src="./dom.js"></script>
