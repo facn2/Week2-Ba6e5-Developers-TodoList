@@ -1,6 +1,24 @@
 # **Week2-Ba6e5-Developers-TodoList**
 
-Create a webpage with a todo list.
+Create a webpage with a todo list. The todo site can be accessed [here](https://facn2.github.io/Week2-Ba6e5-Developers-TodoList/).
+
+## How to use
+
+Clone this repository
+~~~
+$ git clone https://github.com/facn2/Week2-Ba6e5-Developers-TodoList.git
+~~~
+Change directory into the cloned repository
+install all package dependendcies
+~~~
+$ npm install
+~~~
+Run the tests
+~~~
+$ node test.js
+~~~
+The todo app can be used by opening the index.html file in the browser or by [clicking this link](https://facn2.github.io/Week2-Ba6e5-Developers-TodoList/).
+
 
 ## **What**
 
@@ -41,7 +59,5 @@ This is how we will split up the tasks to complete the todo app.
 ### Rules
 
 + camelCase for class names and variables
-+ snake_case for id
 + indentation one tab (two spaces)
-+ semantic html
 + always pair programming, using ping pong when doing TDD
