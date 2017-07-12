@@ -19,15 +19,15 @@
 
   var state = [{
       id: -3,
-      description: 'first heather'
+      description: 'Visit guesthouse for dinner'
     },
     {
       id: -2,
-      description: 'second todo'
+      description: 'Daytrip to Haifa'
     },
     {
       id: -1,
-      description: 'third todo'
+      description: 'Buy a piece of Knafe'
     },
   ]; // this is our initial todoList
 
@@ -69,7 +69,7 @@
 
     // add classes for css
     if (todo.done) {
-      todoNode.style.backgroundColor = 'red';
+      todoNode.style.backgroundColor = '#F35050';
     }
     return todoNode;
 
