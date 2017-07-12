@@ -21,15 +21,28 @@ var todoFunctions = {
     // hint: array.concat
     if (newTodo === undefined) {
       return todos
-    }
-    else {
-     newTodo.id = todoFunctions.generateId();
-     newTodo.done = false;
-     return todos.concat(newTodo);
+    } else if (newTodo.description === ''){
+      console.log(todos);
+      return todos
+    } else {
+      var repeatedTodo = false;
+      todos.forEach(function(todo) {
+        if (newTodo.description === todo.description){
+          // console.log('new: ', newTodo.description);
+          // console.log('old: ', todo.description);
+          repeatedTodo = true;
+        }
+      })
+      if (repeatedTodo === false) {
+        console.log('are we here');
+        newTodo.id = todoFunctions.generateId();
+        newTodo.done = false;
+        return todos.concat(newTodo);
+      }
+      return todos
     }
   },
   deleteTodo: function(todos, idToDelete) {
-
     // should leave the input argument todos unchanged
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter
@@ -47,7 +60,10 @@ var todoFunctions = {
 
     var changeDoneTodos = todos.map(function(everyTodo){
       if (everyTodo.id === idToMark) {
-        return Object.assign({}, everyTodo, {done: true})
+        if (everyTodo.done === false) {
+          return Object.assign({}, everyTodo, {done: true})
+        }
+        return Object.assign({}, everyTodo, {done: false})
       }
       else return everyTodo
     });
