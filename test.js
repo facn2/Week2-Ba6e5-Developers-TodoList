@@ -149,6 +149,32 @@ test("return new todos array without object with idToDelete", function(t) {
 // up to here
 
 // tests for markTodo function //
-
+test("change done to true", function(t) {
+  var todos = [{
+      id: 0,
+      description: 'smash avocados',
+      done: false
+    },
+    {
+      id: 1,
+      description: 'make coffee',
+      done: false
+    }
+  ];
+  var actual = logic.todoFunctions.markTodo(todos, 0);
+  var expected = [{
+      id: 0,
+      description: 'smash avocados',
+      done: true
+    },
+    {
+      id: 1,
+      description: 'make coffee',
+      done: false
+    }
+  ];
+  t.deepEqual(actual, expected);
+  t.end();
+})
 
 // up to here //
