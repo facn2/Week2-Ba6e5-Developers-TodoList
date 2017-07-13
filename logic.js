@@ -25,11 +25,8 @@ var todoFunctions = {
       console.log(todos);
       return todos
     } else {
-      var repeatedTodo = false;
-      todos.forEach(function(todo) {
-        if (newTodo.description === todo.description){
-          repeatedTodo = true;
-        }
+      var repeatedTodo = todos.some(function(eachTodo) {
+        return eachTodo.description === newTodo.description
       })
       if (repeatedTodo === false) {
         console.log('are we here');
@@ -55,13 +52,9 @@ var todoFunctions = {
     // in the new todo array, all elements will remain unchanged except the one with id: idToMark
     // this element will have its done value toggled
     // hint: array.map
-
     var changeDoneTodos = todos.map(function(everyTodo){
       if (everyTodo.id === idToMark) {
-        if (everyTodo.done === false) {
-          return Object.assign({}, everyTodo, {done: true})
-        }
-        return Object.assign({}, everyTodo, {done: false})
+        return Object.assign({}, everyTodo, {done: !everyTodo.done})
       }
       else return everyTodo
     });
