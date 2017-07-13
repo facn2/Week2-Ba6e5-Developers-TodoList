@@ -55,13 +55,9 @@ var todoFunctions = {
     // in the new todo array, all elements will remain unchanged except the one with id: idToMark
     // this element will have its done value toggled
     // hint: array.map
-
     var changeDoneTodos = todos.map(function(everyTodo){
       if (everyTodo.id === idToMark) {
-        if (everyTodo.done === false) {
-          return Object.assign({}, everyTodo, {done: true})
-        }
-        return Object.assign({}, everyTodo, {done: false})
+        return Object.assign({}, everyTodo, {done: !everyTodo.done})
       }
       else return everyTodo
     });
