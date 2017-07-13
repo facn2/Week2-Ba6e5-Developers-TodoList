@@ -21,15 +21,15 @@ var todoFunctions = {
     // hint: array.concat
     if (newTodo === undefined) {
       return todos
-    } else if (newTodo.description === ''){
-      console.log(todos);
+    } else if (newTodo.description.trim() === ''){
+      //console.log(todos);
       return todos
     } else {
       var repeatedTodo = todos.some(function(eachTodo) {
         return eachTodo.description === newTodo.description
       })
       if (repeatedTodo === false) {
-        console.log('are we here');
+        //console.log('are we here');
         newTodo.id = todoFunctions.generateId();
         newTodo.done = false;
         return todos.concat(newTodo);
