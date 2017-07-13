@@ -60,7 +60,6 @@
     markButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.markTodo(state, todo.id);
       update(newState);
-      console.log(newState);
     });
     var markIcon = document.createElement('i');
     markIcon.className = 'fa fa-check';
@@ -88,14 +87,9 @@
       //var input = event.target.description.value;
       //document.getElementsByTagName('input' = '';
       // event.target ....
-
-      console.log(input);
-      // console.log(description);
       var newObj = {};
       newObj['description'] = input;
-      console.log(newObj);
       var newState = todoFunctions.addTodo(state, newObj);
-      console.log(newState);
       // hint: todoFunctions.addTodo
       //var newState = []; // ?? change this!
       update(newState);
