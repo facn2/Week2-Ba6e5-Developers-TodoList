@@ -83,8 +83,12 @@
       // what does event.preventDefault do?
       // what is inside event.target?
       //get the text of form and then add it to the list
-      var input = event.target.description.value; // event.target ....
-      //var input = document.querySelector('input').value;
+      var input = document.querySelector('input').value;
+      document.querySelector('input').value = '';
+      //var input = event.target.description.value;
+      //document.getElementsByTagName('input' = '';
+      // event.target ....
+
       console.log(input);
       // console.log(description);
       var newObj = {};
