@@ -25,11 +25,8 @@ var todoFunctions = {
       console.log(todos);
       return todos
     } else {
-      var repeatedTodo = false;
-      todos.forEach(function(todo) {
-        if (newTodo.description === todo.description){
-          repeatedTodo = true;
-        }
+      var repeatedTodo = todos.some(function(eachTodo) {
+        return eachTodo.description === newTodo.description
       })
       if (repeatedTodo === false) {
         console.log('are we here');
