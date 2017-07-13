@@ -28,8 +28,6 @@ var todoFunctions = {
       var repeatedTodo = false;
       todos.forEach(function(todo) {
         if (newTodo.description === todo.description){
-          // console.log('new: ', newTodo.description);
-          // console.log('old: ', todo.description);
           repeatedTodo = true;
         }
       })
